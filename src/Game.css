@@ -1,0 +1,27 @@
+.game {
+  display: flex;
+  width: 80%;
+  margin: auto;
+  background-color: whitesmoke;
+  box-shadow: -2px 2px -2px 2px black;
+  margin-top: 10px;
+}
+.game__image {
+  flex-basis: content;
+}
+
+.game__image > img {
+  width: 50%;
+}
+.game__info > div {
+  display: flex;
+}
+.game__info > div {
+  align-items: center;
+}
+.game__description {
+  display: block !important;
+}
+.game__info {
+  align-self: center;
+}

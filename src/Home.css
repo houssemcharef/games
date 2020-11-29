@@ -1,0 +1,53 @@
+/* @import ("./font/NerkoOne-Regular.ttf"); */
+.home {
+  background-image: url("https://store.ubi.com/on/demandware.static/-/Library-Sites-shared-library-web/default/dwa966a139/landings/2020/uplayplus_games/images_uplayplus_hero.jpg");
+  height: 100vh;
+  /* z-index: -1; */
+}
+
+.home__black {
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+  height: 100vh;
+}
+
+.home__black > p {
+  z-index: 2;
+  font-family: NerkoOne-Regular;
+  color: white;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.descption {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  color: white;
+  z-index: 2;
+  transform: translate(50%, -50%);
+  font-size: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.descption > button {
+  width: 80%;
+  height: 50px;
+  background-color: transparent;
+  color: burlywood;
+  font-size: 20px;
+  font-weight: 500;
+  border-color: burlywood;
+  text-align: center;
+  margin: 20px;
+  border-radius: 5px;
+}
+.descption > button:hover {
+  background-color: burlywood;
+  color: white;
+}
