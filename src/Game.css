@@ -8,20 +8,21 @@
 }
 .game__image {
   flex-basis: content;
+  flex: 1;
 }
 
 .game__image > img {
-  width: 50%;
+  width: 90%;
 }
 .game__info > div {
   display: flex;
-}
-.game__info > div {
   align-items: center;
 }
+
 .game__description {
   display: block !important;
 }
 .game__info {
   align-self: center;
+  flex: 2;
 }
