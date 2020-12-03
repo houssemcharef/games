@@ -2,7 +2,6 @@ import React from 'react';
 import "./Navbar.css";
 
 export default function Navbar(props) {
-    console.log(props.affiche);
     return (
         <div className="navbar">
             <ul>

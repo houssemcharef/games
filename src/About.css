@@ -1,0 +1,33 @@
+.header {
+  background-image: url("https://store.ubi.com/on/demandware.static/-/Library-Sites-shared-library-web/default/dwa966a139/landings/2020/uplayplus_games/images_uplayplus_hero.jpg");
+  height: 40vh;
+  /* z-index: -1; */
+}
+
+.black {
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+  height: 40vh;
+  display: flex;
+}
+
+.black h1 {
+  align-self: center;
+  color: burlywood;
+  margin-left: 30px;
+  font-family: math;
+  font-size: 70px;
+}
+.description {
+  width: 80%;
+  background-color: lightgray;
+  border-radius: 10px;
+  margin: 10px auto;
+  padding: 20px;
+  height: 50vh;
+}
+
+.description p {
+  font-size: 25px;
+  line-height: 40px;
+}

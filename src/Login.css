@@ -1,0 +1,67 @@
+.login__section {
+  display: flex;
+  flex-direction: column;
+  width: 450px;
+  height: 400px;
+  /* background-color: rgba(128, 128, 128, 0.7); */
+  z-index: 2;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid burlywood;
+  border-radius: 10px;
+}
+
+.bg_black {
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+  height: 100vh;
+}
+
+.login {
+  height: 100%;
+  z-index: 0;
+  background-image: url("https://store.ubi.com/on/demandware.static/-/Library-Sites-shared-library-web/default/dwa966a139/landings/2020/uplayplus_games/images_uplayplus_hero.jpg");
+}
+.login__section > h1 {
+  text-align: center;
+  padding: 30px 0px;
+  color: burlywood;
+}
+
+.login__section > input {
+  width: 80%;
+  height: 35px;
+  border-radius: 7px;
+  margin: 10px auto;
+}
+
+.login__section > button {
+  width: 80%;
+  height: 35px;
+  border-radius: 7px;
+  margin: 30px auto;
+  background-color: transparent;
+  color: burlywood;
+  font-size: 20px;
+  font-weight: 500;
+  border-color: burlywood;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.login__section > button:hover {
+  background-color: burlywood;
+  color: white;
+}
+label {
+  margin-left: 45px;
+  font-weight: 400;
+  font-size: 20px;
+  color: burlywood;
+}
+
+::placeholder {
+  padding-left: 10px;
+}
