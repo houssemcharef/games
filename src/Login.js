@@ -5,7 +5,6 @@ export default function Login(props) {
     const [password, setPassword]=useState('');
 
     const handelInputUsername= (event)=>{
-        
         setUsername(event.target.value);
     }
 
@@ -14,6 +13,8 @@ export default function Login(props) {
     }
     return (
         <div className="login">
+
+
            <div className="bg_black">
             <div  className="login__section">
                     <h1>Login</h1>
