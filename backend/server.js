@@ -57,15 +57,15 @@ app.get('/sync',(req , res) => {
 //     })
 // })
 
-app.get('/deletegame/:id', sync function(req, res) { 
+// app.get('/deletegame/:id', sync function(req, res) { 
 
     
 
-    var id = req.params.id.toString();
+//     var id = req.params.id.toString();
     
 
-    await dbModel.deleteOne({"_id":id});
-    });
+//     await dbModel.deleteOne({"_id":id});
+//     });
 
 
 
