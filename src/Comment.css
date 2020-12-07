@@ -1,0 +1,14 @@
+.user_info > p {
+  margin-left: 10px;
+  font-size: 25px;
+}
+.comment {
+  padding: 10px;
+}
+.comment > p {
+  font-size: 20px;
+}
+.line {
+  width: 90%;
+  margin: 10px auto;
+}

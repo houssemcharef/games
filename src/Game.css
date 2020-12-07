@@ -26,3 +26,37 @@
   align-self: center;
   flex: 2;
 }
+.commentaire {
+  width: 80%;
+  margin: auto;
+  background-color: whitesmoke;
+  padding: 5px;
+}
+
+.button__comentaire {
+  text-align: center;
+}
+.user_info {
+  display: flex;
+  align-items: center;
+}
+.MuiIconButton-label {
+  display: block !important;
+}
+
+.user_comment {
+  width: 80%;
+  margin: auto;
+  overflow: auto;
+}
+
+.comment_input {
+  width: 100%;
+  height: 100px;
+}
+.send_Button {
+  float: right;
+  margin: 10px 0;
+  width: 150px;
+  height: 30px;
+}

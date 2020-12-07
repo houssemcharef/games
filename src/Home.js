@@ -19,7 +19,7 @@ export default function Home(props) {
                     <h1>+100 game</h1>
                     <button onClick={handleClick}>About US</button> 
                 </div>
-                <Navbar affiche={props.affiche}  />
+                <Navbar affiche={props.affiche}  setType={props.setType}  type={props.type}/>
             </div>
         </div>
     )
