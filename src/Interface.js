@@ -12,9 +12,9 @@ function Interface() {
   const [type, setType]=useState();
   const afficheGame= () =>{
     
-    if(type=='all') {
+    if(type==='all') {
       return games.map((game)=>{
-        <Game 
+       return <Game 
         platforme={game.platforme}
         image={game.image} 
         title={game.title}
@@ -72,16 +72,16 @@ function Interface() {
     <div className="App">
         <Home   affiche={setAffiche} setType={setType}  type={type}/>
         
-
-        {affiche && afficheGame() 
-                    // (<>
-                    //     <div className="app__search">
-                    //         <input className="recherche" />
-                    //         <SearchIcon className="search"/>
-                    //     </div>
+        {affiche && <>
+                         <div className="app__search">
+                            <input className="recherche" />
+                            <SearchIcon className="search"/>
+                       </div>
                           
-                    // </>)
-          }
+                     </> }
+        {affiche && afficheGame() }
+                    
+
     </div>
   );
 }
