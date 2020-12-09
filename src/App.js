@@ -8,6 +8,8 @@ import {
 import Interface from "./Interface";
 import About from './About';
 import Login from './Login';
+import Signup from './SignUp';
+import Adminpanel from './AdminPanel';
 
 
 function App() {
@@ -20,6 +22,12 @@ function App() {
           </Route>
           <Route path="/login">
             <Login />
+          </Route>
+          <Route path="/signup">
+            <Signup />
+          </Route>
+          <Route path="/adminpanel">
+            <Adminpanel />
           </Route>
           <Route path="/">
             <Interface />

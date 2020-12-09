@@ -13,7 +13,7 @@ function Interface() {
   const afficheGame= () =>{
     
     if(type==='all') {
-      return games.map((game)=>{
+       return games.map((game)=>{
        return <Game 
         platforme={game.platforme}
         image={game.image} 
@@ -25,7 +25,7 @@ function Interface() {
         />
       }) 
     } else {
-      return games.map((game)=>{
+       return games.map((game)=>{
         return type===game.type &&
         <Game 
         platforme={game.platforme}

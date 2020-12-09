@@ -1,0 +1,9 @@
+.add__button {
+  width: 30%;
+  align-self: flex-end;
+  margin: 20px !important;
+}
+.table {
+  display: flex;
+  flex-direction: column;
+}

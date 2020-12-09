@@ -35,7 +35,7 @@
   align-items: center;
 }
 
-.descption > button {
+.aboutButton {
   width: 80%;
   height: 50px;
   background-color: transparent;
@@ -47,7 +47,30 @@
   margin: 20px;
   border-radius: 5px;
 }
-.descption > button:hover {
+.aboutButton:hover {
+  background-color: burlywood;
+  color: white;
+}
+
+.signButtonDiv {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.signButton {
+  background-color: transparent;
+  color: burlywood;
+  font-size: 20px;
+  font-weight: 500;
+  border-color: burlywood;
+  text-align: center;
+  margin: 20px;
+  border-radius: 5px;
+  padding: 10px 20px;
+}
+
+.signButton:hover {
   background-color: burlywood;
   color: white;
 }

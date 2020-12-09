@@ -1,0 +1,36 @@
+.navbarAdmin {
+  display: flex;
+  height: 50px;
+  width: 100%;
+  background-color: dodgerblue;
+}
+
+.navbarAdmin > ul {
+  display: flex;
+  flex-direction: row;
+  bottom: 0;
+  color: black;
+  z-index: 2;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+}
+
+.navbarAdmin li {
+  list-style-type: none;
+  font-size: 20px;
+  padding: 10px;
+  color: black;
+  background-color: transparent;
+}
+
+.navbarAdmin li:hover {
+  border-radius: 5px;
+  color: white;
+}
+
+.navbarAdmin > p {
+  color: white;
+  font-size: xx-large;
+  align-self: center;
+}
