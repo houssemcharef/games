@@ -22,9 +22,8 @@ mongoose.connect(connection_url,{
 });
 
 
-app.post('/add', (req, res) =>{
+app.post('/addgame', (req, res) =>{
     const body = req.body;
-    console.log(body);
     dbModel.create(body,(err, data) => {
         if (err){
             res.status(500).send(err);
@@ -36,6 +35,7 @@ app.post('/add', (req, res) =>{
 
 
 app.get('/sync',(req , res) => {
+    res.set('Access-Control-Allow-Origin', '*');
     dbModel.find((err, data) =>{
         if (err) {
             res.status(500).send(err);
@@ -45,27 +45,35 @@ app.get('/sync',(req , res) => {
     })
 })
 
-// app.delete('/delete/:id',(req, res) => {
-//     dbModel.find( {_id:req.params.id}, (err, data) => {
-//         if(err){
-//             res.status(500).send(err);
-//         }else {
-//            collection.remove()
-//             });
-           
-//         }
-//     })
-// })
+app.delete('/delete/:id', function (req, res) {
+    var id = req.params.id;
+    const collection = dbModel.find((err, data) =>{
+        collection.deleteOne({ _id: new mongoose.Types.ObjectId(id) }, function (err, results) {
+            if (err) {
+                res.status(500).send(err);
+            }else { 
+                res.status(200).send(results)
+            }
+        });
+    });
 
-// app.get('/deletegame/:id', sync function(req, res) { 
+});
 
-    
+app.put('/update/:id', function (req, res) {
+    var id = req.params.id;
+    const collection = dbModel.find((err, data) =>{
+        collection.updateOne({ _id: new mongoose.Types.ObjectId(id) },req.body, function (err, results) {
+            if (err) {
+                res.status(500).send(err);
+            }else { 
+                res.status(200).send(results)
+            }
+        });
+    });
 
-//     var id = req.params.id.toString();
-    
+});
 
-//     await dbModel.deleteOne({"_id":id});
-//     });
+
 
 
 

@@ -1,12 +1,13 @@
 import mongoose from 'mongoose';
 
 const instance = mongoose.Schema({
-    name:String,
-    price:String,
-    image:String,
-    description:String,
-    platforme:String,
-    ratting:String,
+        platforme:String,
+      image:String, 
+      title:String, 
+      ratting:String, 
+      price: String,
+      description:String ,
+      type: String
 })
 
 export default mongoose.model('game', instance);

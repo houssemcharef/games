@@ -3,6 +3,7 @@ import './Game.css';
 import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
 import Comment from './Comment';
 import IconButton from '@material-ui/core/IconButton';
+import axios from './axios.js'
 
 
 export default function Game(props) {
@@ -10,7 +11,7 @@ export default function Game(props) {
     const [v ,setV]=useState(false);
     const [comment,  setComment]=useState('');
 
-    let [comments, setComments]=useState([
+    const [comments, setComments]=useState([
         {
             name:"test", 
             image:"https://avatars1.githubusercontent.com/u/62062663?s=460&u=1aa570519a31b68874847c4cb2a2f1186c19cc72&v=4", 
@@ -27,6 +28,7 @@ export default function Game(props) {
             comment:"sdsdsdss"
         },
     ]);
+    
 
     const handelComment = (e) => {
         console.log("valeur 1="+v);
