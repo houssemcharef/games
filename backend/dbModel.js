@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
 
 const instance = mongoose.Schema({
-        platforme:String,
+      platforme:String,
       image:String, 
       title:String, 
       ratting:String, 

@@ -10,6 +10,7 @@ import About from './About';
 import Login from './Login';
 import Signup from './SignUp';
 import Adminpanel from './AdminPanel';
+import AddGame from './AddGame';
 
 
 function App() {
@@ -28,6 +29,9 @@ function App() {
           </Route>
           <Route path="/adminpanel">
             <Adminpanel />
+          </Route>
+          <Route path="/addgame">
+            <AddGame />
           </Route>
           <Route path="/">
             <Interface />

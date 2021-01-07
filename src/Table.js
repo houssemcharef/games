@@ -1,16 +1,19 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { DataGrid, ValueFormatterParams } from '@material-ui/data-grid';
 import { Button } from '@material-ui/core';
 import DeleteIcon from '@material-ui/icons/Delete';
 import EditIcon from '@material-ui/icons/Edit';
 import AddIcon from '@material-ui/icons/Add';
 import './Table.css'
+import axios from './axios'
 
 export default function TableAdmin(props) {
+
+  const [games, setGames]= useState([]);
     
   const columns = [
-    { field: 'id', headerName: 'ID', width: 70 },
-    { field: 'name', headerName: 'Name', width: 300 },
+    { field: 'id', headerName: 'ID', width: 200 },
+    { field: 'title', headerName: 'Name', width: 300 },
     {
       field: 'Edit',
       headerName: 'Edit',
@@ -36,17 +39,17 @@ export default function TableAdmin(props) {
        
           
         <Button
-        variant="contained"
-        color="secondary"
-        size="small"
-        startIcon={<DeleteIcon />}
-      >
+          variant="contained"
+          color="secondary"
+          size="small"
+          startIcon={<DeleteIcon />}
+        >
             Delete
           </Button>
         )
     },
   ];
-  
+
   const rows = [
     { id: 1, name: 'houssem' },
     { id: 2, name: 'houssem' },
@@ -62,8 +65,18 @@ export default function TableAdmin(props) {
     { id: 12, name: 'houssem' },
     
   ];
-      
-      
+   useEffect(() =>{
+    const fetchGames = async () =>
+            await axios.get('/sync').then ((res) => {
+              setGames(res.data.map(item => {return {"id": item._id, "title": item.title} }));
+              console.log(games);
+            })
+          fetchGames();
+          
+
+  }, []);
+  
+  console.log(games);
     return (
         <div className="table">
         
@@ -71,7 +84,7 @@ export default function TableAdmin(props) {
             Add
         </Button>
         <div style={{ height: 400  }}>
-            <DataGrid rows={rows} columns={columns} pageSize={5} />
+            <DataGrid rows={games} columns={columns} pageSize={5} />
         </div>
         </div>
     )

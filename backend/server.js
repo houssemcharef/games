@@ -1,4 +1,3 @@
-import { ContactsOutlined } from '@material-ui/icons';
 import express from 'express';
 import mongoose from 'mongoose';
 import dbModel from './dbModel.js';
@@ -6,9 +5,7 @@ import dbModel from './dbModel.js';
 const app= express();
 const port =process.env.PORT || 8080;
 
-app.get('/game', (req, res) =>{
-    res.send('houssem');
-});
+
 
 //midle wares
 app.use(express.json());
@@ -23,6 +20,8 @@ mongoose.connect(connection_url,{
 
 
 app.post('/addgame', (req, res) =>{
+    req.set('Access-Control-Allow-Origin', '*');
+
     const body = req.body;
     dbModel.create(body,(err, data) => {
         if (err){
