@@ -10,7 +10,19 @@ export default function AddGame(props) {
         const [price, setPrice]=useState('');
         const [image, setImage]=useState('');
         const [description, setDescription]=useState('');
-
+        const [type, setType]=useState('');
+        const send = async () =>{
+            await axios.post('/addgame', {
+                platforme: platforme,
+                image:image, 
+                title:title, 
+                ratting:ratting, 
+                price: price,
+                description:description ,
+                type: type
+            }).then(console.log("success"))
+        
+        }
         const handelInputTitle= (event)=>{
             setTitle(event.target.value);
         }
@@ -31,23 +43,15 @@ export default function AddGame(props) {
         const handleInputDescription = (event) => {
             setDescription(event.target.value);
         }
+        const handleSelect = (event) => {
+            
+            setType(event.target.value);
+            console.log(type);
+        }
 
        
 
-        const send = async () =>{
-            await axios.post('/addgame', {
-                platforme:"platforme",
-                image:"platforme", 
-                title:"title", 
-                ratting:"ratting", 
-                price: "price",
-                description:"description" ,
-                type: "type"
-            },{
-                headers: {'Access-Control-Allow-Origin': '*'}
-              }).then(console.log("success"))
-        
-        }
+       
     return (
         <div className="addgame">
             <div  className="login__section height-650">
@@ -59,27 +63,27 @@ export default function AddGame(props) {
                     <input name="platforme" placeholder="platforme" type="text" value={platforme} onChange={handelInputPlatforme}/>
 
                     <label htmlFor="ratting">ratting:</label>
-                    <input name="ratting" placeholder="ratting" type="password" value={ratting} onChange={handelInputRatting}/>
+                    <input name="ratting" placeholder="ratting" type="text" value={ratting} onChange={handelInputRatting}/>
 
                     <label htmlFor="price">price:</label>
                     <input name="price" placeholder="price" type="text" value={price} onChange={handelInputPrice}/>
 
-                    <label htmlFor="image">image:</label>
-                    <input name="image" type="file" value={image} onChange={handleInputImage}/>
+                    <label htmlFor="image">imageURL:</label>
+                    <input name="image" type="text" value={image} onChange={handleInputImage}/>
 
                     <label htmlFor="description">description:</label>
                     <textarea name="description" id="description" cols="30" rows="10" value={description} onChange={handleInputDescription}>
 
                     </textarea>
 
-                    <select id="type">
-                        <option disabled>select type</option>
+                    <select id="type" onChange={handleSelect}>
+                        <option disabled selected>select type</option>
                         <option value="action">action</option>
                         <option value="aventure" >aventure</option>
                     </select>
 
 
-                    <button onClick={send}>Sign Up</button>
+                    <button onClick={send}>Add Game</button>
                 </div>
             </div>
         
